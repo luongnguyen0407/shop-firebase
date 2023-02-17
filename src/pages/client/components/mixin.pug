@@ -1,0 +1,51 @@
+mixin hero(url, name)
+		.carousel-item(class = name)
+			.container
+				.row.p-5
+					.mx-auto.col-md-8.col-lg-6.order-lg-last
+						img.img-fluid(src=url alt='')
+					.col-lg-6.mb-0.d-flex.align-items-center
+						.text-align-left.align-self-center
+							h1.h1.text-success
+								b Zay
+								|  eCommerce
+							h3.h2 Tiny and Perfect eCommerce Template
+							p
+								| Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1). 
+								| This template is 100% free provided by 
+								a.text-success(rel='sponsored' href='https://templatemo.com' target='_blank') TemplateMo
+								|  website. 
+								|                                     Image credits go to 
+								a.text-success(rel='sponsored' href='https://stories.freepik.com/' target='_blank') Freepik Stories
+								| ,
+								a.text-success(rel='sponsored' href='https://unsplash.com/' target='_blank') Unsplash
+								|  and
+								a.text-success(rel='sponsored' href='https://icons8.com/' target='_blank') Icons 8
+							
+
+mixin categories(category, src)
+		.col-12.col-md-4.p-5.mt-3
+			a(href='#')
+				img.rounded-circle.img-fluid.border(src=src)
+			h5.text-center.mt-3.mb-3= category
+			p.text-center
+				a.btn.btn-success Go Shop
+
+mixin product(name, src)
+		.col-12.col-md-4.mb-4
+			.card.h-100
+				a(href='#')
+					img.card-img-top(src=src)
+				.card-body
+					ul.list-unstyled.d-flex.justify-content-between
+						li
+							i.text-warning.fa.fa-star
+							i.text-warning.fa.fa-star
+							i.text-warning.fa.fa-star
+							i.text-muted.fa.fa-star
+							i.text-muted.fa.fa-star
+						li.text-muted.text-right $240.00
+					a.h2.text-decoration-none.text-dark(href='#')= name
+					p.card-text
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+					p.text-muted Reviews (24)

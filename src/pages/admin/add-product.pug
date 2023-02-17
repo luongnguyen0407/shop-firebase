@@ -1,0 +1,42 @@
+extends ./layouts/layout.pug
+
+
+block content
+	#layoutSidenav_content
+		section.form-add 
+				form.needs-validation.form_add_product(novalidate='')
+					.row
+						.col-md-4.mb-3
+							label(for='product-name') Product Name
+							input#product-name.form-control.name-product(type='text' placeholder='Name'  required='' name='name')
+							.invalid-feedback This field is require
+							.valid-feedback
+								| Looks good!
+						.col-md-4.mb-3
+							label(for='validationCustom02') Price
+							input#validationCustom02.form-control.price-product(type='text' placeholder='price' name='price' required='')
+							.invalid-feedback This field is require
+							.valid-feedback
+								| Looks good!
+						.col-md-4.mb-3
+							label.d-block(for='validationCustom02') Category
+							select.form-control.custom-select.list-category(required='')
+							.invalid-feedback Example invalid custom select feedback
+					.row
+						.col-md-6.mb-3
+							.container-quill
+							//- label(for='validationCustom03') Details
+							//- textarea#validationCustom03.form-control.detail-product(type='text' placeholder='etails' required='')
+							//- .invalid-feedback
+							//- 	| Please provide a valid city.
+						.col-md-3.mb-3
+							label(for='validationCustom04') Image
+							input#validationCustom04.form-control.img-product(type='file' placeholder='State' required='')
+							.invalid-feedback
+								| This field is require
+					.form-group 
+						.editor
+					button.btn.btn-primary.mx-auto.d-block(type='submit') Submit form
+
+block script
+	script(src="../../services/admin/add-product.js" type="module") 

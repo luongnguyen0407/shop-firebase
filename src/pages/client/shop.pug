@@ -1,0 +1,67 @@
+extends ./layouts/layout.pug
+	
+block content
+	.container.py-5
+			.row
+				.col-lg-3
+					h1.h2.pb-4 Categories
+					ul.list-unstyled.templatemo-accordion
+						li.pb-3
+							a.collapsed.d-flex.justify-content-between.h3.text-decoration-none(href='#')
+								| Gender
+								i.fa.fa-fw.fa-chevron-circle-down.mt-1
+							ul.collapse.show.list-unstyled.pl-3
+								li
+									a.text-decoration-none(href='#') Men
+								li
+									a.text-decoration-none(href='#') Women
+						li.pb-3
+							a.collapsed.d-flex.justify-content-between.h3.text-decoration-none(href='#')
+								| Sale
+								i.pull-right.fa.fa-fw.fa-chevron-circle-down.mt-1
+							ul#collapseTwo.collapse.list-unstyled.pl-3
+								li
+									a.text-decoration-none(href='#') Sport
+								li
+									a.text-decoration-none(href='#') Luxury
+						li.pb-3
+							a.collapsed.d-flex.justify-content-between.h3.text-decoration-none(href='#')
+								| Product
+								i.pull-right.fa.fa-fw.fa-chevron-circle-down.mt-1
+							ul#collapseThree.collapse.list-unstyled.pl-3
+								li
+									a.text-decoration-none(href='#') Bag
+								li
+									a.text-decoration-none(href='#') Sweather
+								li
+									a.text-decoration-none(href='#') Sunglass
+				.col-lg-9
+					.row
+						.col-md-6
+							ul.list-inline.shop-top-menu.pb-3.pt-1
+								li.list-inline-item
+									a.h3.text-dark.text-decoration-none.mr-3(href='#') All
+								li.list-inline-item
+									a.h3.text-dark.text-decoration-none.mr-3(href='#') Men&apos;s
+								li.list-inline-item
+									a.h3.text-dark.text-decoration-none(href='#') Women&apos;s
+						.col-md-6.pb-4
+							.d-flex
+								select.form-control.list-category
+									option Featured
+									option A to Z
+									option Item
+					.row.wrap_list-product
+						//- section#layoutSidenav_content(style='background-color: #eee;')
+						//- 	.container.py-5.list-product
+						//- 		.follow-the-leader
+						//- 			div
+						//- 			div
+						//- 			div
+						//- 			div
+						//- 			div
+						
+					div(div='row')
+						.mx-auto.btn.btn-info.d-block.btn-load-more Load more
+block script
+	script(src="../../services/shop.js" type="module") 

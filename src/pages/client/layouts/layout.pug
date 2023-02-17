@@ -1,0 +1,13 @@
+doctype html
+head
+		title Pug
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css")
+body
+	main
+		include ../components/header.pug
+		.content
+			block content
+	script(src="../../firebase/config.js" type="module") 
+	script(src="../../services/main.js" type="module")   	
+	block script  

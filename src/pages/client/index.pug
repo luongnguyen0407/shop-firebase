@@ -1,0 +1,45 @@
+extends ./layouts/layout.pug
+include ./components/mixin.pug
+block content
+	main
+		#template-mo-zay-hero-carousel.carousel.slide(data-bs-ride='carousel')
+			ol.carousel-indicators
+				li.active(data-bs-target='#template-mo-zay-hero-carousel' data-bs-slide-to='0')
+				li(data-bs-target='#template-mo-zay-hero-carousel' data-bs-slide-to='1')
+				li(data-bs-target='#template-mo-zay-hero-carousel' data-bs-slide-to='2')
+			.carousel-inner
+				+hero('https://themewagon.github.io/zay-shop/assets/img/banner_img_01.jpg', 'active')
+				+hero('https://themewagon.github.io/zay-shop/assets/img/banner_img_02.jpg')
+				+hero('https://themewagon.github.io/zay-shop/assets/img/banner_img_03.jpg')
+			a.carousel-control-prev.text-decoration-none.w-auto.ps-3(href='#template-mo-zay-hero-carousel' role='button' data-bs-slide='prev')
+				i.fas.fa-chevron-left
+			a.carousel-control-next.text-decoration-none.w-auto.pe-3(href='#template-mo-zay-hero-carousel' role='button' data-bs-slide='next')
+				i.fas.fa-chevron-right
+		section.container.py-5
+			.row.text-center.pt-3
+				.col-lg-6.m-auto
+					h1.h1 Categories of The Month
+					p
+						| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						| deserunt mollit anim id est laborum.
+			.row
+				+categories('Watches', 'https://themewagon.github.io/zay-shop/assets/img/category_img_01.jpg')
+				+categories('Shoes', 'https://themewagon.github.io/zay-shop/assets/img/category_img_02.jpg')
+				+categories('Accessories', 'https://themewagon.github.io/zay-shop/assets/img/category_img_03.jpg')
+		section.bg-light
+			.container.py-5
+				.row.text-center.py-3
+					.col-lg-6.m-auto
+						h1.h1 Featured Product
+						p
+							| Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							| Excepteur sint occaecat cupidatat non proident.
+				.row
+					+product('Gym Weight', 'https://themewagon.github.io/zay-shop/assets/img/feature_prod_01.jpg')
+					+product('Cloud Nike Shoes', 'https://themewagon.github.io/zay-shop/assets/img/feature_prod_02.jpg')
+					+product('Summer Addides Shoes', 'https://themewagon.github.io/zay-shop/assets/img/feature_prod_03.jpg')
+
+block script
+	script(src="../../services/home.js" type="module") 
+				
+	

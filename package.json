@@ -1,0 +1,36 @@
+{
+  "name": "ass",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf ./dist/* && parcel ./src/pages/*.pug ./src/pages/client/*.pug ./src/pages/admin/*.pug",
+    "devw": "parcel watch ./src/pages/*.pug",
+    "build": "rm -rf ./dist/* && parcel build ./src/pages/*.pug --no-source-maps"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "buffer": "^5.5.0",
+    "parcel": "^2.8.3",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss-preset-env": "^8.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "axios": "^1.3.1",
+    "bootstrap": "^5.2.3",
+    "chart.js": "^4.2.0",
+    "firebase": "^9.17.0",
+    "jquery": "^3.6.3",
+    "quill": "^1.3.7",
+    "simple-datatables": "^7.1.0",
+    "sweetalert2": "^11.7.1",
+    "swiper": "^9.0.2",
+    "toastify-js": "^1.12.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie <= 9",
+    "last 3 versions"
+  ]
+}

@@ -1,0 +1,78 @@
+extends ./layouts/layout.pug
+	
+block content
+				section.h-100.h-custom(style='background-color: #eee;')
+					.container.py-5.h-100
+						.row.d-flex.justify-content-center.align-items-center.h-100
+							.col
+								.card
+									.card-body.p-4
+										.row
+											.col-lg-7
+												h5.mb-3
+													a.text-body(href='./shop.pug')
+														i.fas.fa-long-arrow-alt-left.me-2
+														| Continue shopping
+												hr
+												.d-flex.justify-content-between.align-items-center.mb-4
+													div
+														p.mb-1 Shopping cart
+														p.mb-0 You have 4 items in your cart
+													div
+														p.mb-0
+															span.text-muted Sort by:
+															a.text-body(href='#!')
+																| price 
+																i.fas.fa-angle-down.mt-1
+												.wrap-list-cart
+											.col-lg-5
+												.card.bg-primary.text-white.rounded-3
+													.card-body
+														.d-flex.justify-content-between.align-items-center.mb-4
+															h5.mb-0 Card details
+															img.img-fluid.rounded-3(src='https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp' style='width: 45px;' alt='Avatar')
+														p.small.mb-2 Card type
+														a.text-white(href='#!' type='submit')
+															i.fab.fa-cc-mastercard.fa-2x.me-2
+														a.text-white(href='#!' type='submit')
+															i.fab.fa-cc-visa.fa-2x.me-2
+														a.text-white(href='#!' type='submit')
+															i.fab.fa-cc-amex.fa-2x.me-2
+														a.text-white(href='#!' type='submit')
+															i.fab.fa-cc-paypal.fa-2x
+														form.mt-4
+															.form-outline.form-white.mb-4
+																input#typeName.form-control.form-control-lg(type='text' placeholder="Tên người nhận")
+																label.form-label(for='typeName') Tên người nhận
+															.form-outline.form-white.mb-4.wrap_list_pr1.input_province(data-parent='1')
+																input#typeText1.form-control.form-control-lg(type='text' placeholder='Thành phố' minlength='19' maxlength='19')
+																ul.list_province.scroll_style
+																label.form-label(for='typeText1') Thành phố
+															.row.mb-4
+																.col-md-6
+																	.form-outline.form-white.wrap_list_pr2.input_province(data-parent='2')
+																		input#typeExp.form-control.form-control-lg(type='text' placeholder='Huyện' )
+																		.ul.list_province.scroll_style 
+																		label.form-label(for='typeExp') Huyện
+																.col-md-6
+																	.form-outline.form-white.wrap_list_pr3.input_province(data-parent='3')
+																		input#typeText.form-control.form-control-lg(type='text' placeholder='Thôn' )
+																		.ul.list_province.scroll_style
+																		label.form-label(for='typeText') Cvv
+														hr.my-4
+														.d-flex.justify-content-between
+															p.mb-2 Subtotal
+															p.mb-2 $4798.00
+														.d-flex.justify-content-between
+															p.mb-2 Shipping
+															p.mb-2 $20.00
+														.d-flex.justify-content-between.mb-4
+															p.mb-2 Total(Incl. taxes)
+															p.mb-2.total_bill 0
+														button.btn.btn-info.btn-block.btn-lg(type='button')
+															.d-flex.justify-content-between
+																span
+																	| Checkout 
+																	i.fas.fa-long-arrow-alt-right.ms-2
+block script
+		script(src="../../services/cart.js" type="module") 
