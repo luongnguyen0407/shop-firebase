@@ -33,7 +33,7 @@ let lastKeyObj = {
 const firstPageQuery = query(
   starCountRef,
   orderByChild("name"),
-  limitToFirst(9)
+  limitToFirst(6)
 );
 const getListUserCart = (uid) => {
   const starCountRef = ref(db, "cart");
@@ -52,6 +52,7 @@ const getListUserCart = (uid) => {
   //   }
   // });
   onValue(loadMoreQuery, (snapshot) => {
+    $("#preloder").show();
     if (snapshot.exists()) {
       snapshot.forEach((item) => {
         console.log("item: ", item);
@@ -131,7 +132,9 @@ const renderData = (data) => {
             <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                 <ul class="list-unstyled">
                     <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
-                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                    <li><a class="btn btn-success text-white mt-2" href="./details.html?${
+                      product.id
+                    }"><i class="far fa-eye"></i></a></li>
                     <li data-id=${
                       product.id
                     } class='btn-add_cart btn btn-success text-white mt-2'><i class="fas fa-cart-plus"></i></li>
@@ -166,6 +169,7 @@ const renderData = (data) => {
 </div>`;
     wrapListProduct.insertAdjacentHTML("beforeend", template);
   });
+  $("#preloder").hide();
 };
 
 //get categories

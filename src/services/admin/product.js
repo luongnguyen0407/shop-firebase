@@ -67,7 +67,6 @@ const handleTemplate = (product) => {
 const starCountRef = ref(db, "products");
 const handleDeleteProduct = (id) => {
   if (!id) return;
-  console.log(id);
   const databaseRef = ref(db, `products/${id}`);
   try {
     remove(databaseRef);

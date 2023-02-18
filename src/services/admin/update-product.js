@@ -15,7 +15,6 @@ const productName = document.querySelector(".name-product");
 const productPrice = document.querySelector(".price-product");
 const imgOld = document.querySelector(".img-old");
 const dataOld = [];
-console.log(window.location);
 const id = window.location.search.split("?")[1];
 const db = getDatabase();
 if (!id) {

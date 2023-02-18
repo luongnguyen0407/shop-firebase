@@ -1,0 +1,40 @@
+extends ./layouts/layout.pug
+block content
+		section.loading 
+			div#preloder
+					.loader
+		section.bg-light
+			.container.pb-5
+				.row
+					.col-lg-5.mt-5
+						.card.mb-3
+							img#product-detail.card-img.img-fluid.img-details(src='https://themewagon.github.io/zay-shop/assets/img/product_single_10.jpg' alt='Card image cap')
+						.row
+							// Start Carousel Wrapper
+							#multi-item-example.col-10.carousel.slide.carousel-multi-item(data-bs-ride='carousel')
+							// End Carousel Wrapper
+					// col end
+					.col-lg-7.mt-5
+						.card
+							.card-body
+								h1.h2.name-product xxx
+								p.h3.py-2.product-cost xxx
+								p.py-2
+									i.fa.fa-star.text-warning
+									i.fa.fa-star.text-warning
+									i.fa.fa-star.text-warning
+									i.fa.fa-star.text-warning
+									i.fa.fa-star.text-secondary
+									span.list-inline-item.text-dark Rating 4.8 | 36 Comments
+									p.text-muted
+										strong Easy Wear
+								h6 Description:
+								p.description
+								div
+									.row.py-3
+										.col.d-grid
+											button.btn.btn-success.btn-lg(type='submit' name='submit' value='buy') Buy
+										.col.d-grid
+											button.btn.btn-success.btn-lg(type='submit' name='submit' value='addtocard') Add To Cart
+block script
+	script(src="../../services/details.js" type="module") 

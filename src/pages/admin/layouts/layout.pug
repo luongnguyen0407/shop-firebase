@@ -33,15 +33,12 @@ body
 							a.nav-link.collapsed(href='#' data-bs-toggle='collapse' data-bs-target='#collapsePages' aria-expanded='false' aria-controls='collapsePages')
 								.sb-nav-link-icon
 									i.fas.fa-book-open
-								|                                 Pages
+								|                                 Category
 								.sb-sidenav-collapse-arrow
 									i.fas.fa-angle-down
 							#collapsePages.collapse(aria-labelledby='headingTwo' data-bs-parent='#sidenavAccordion')
 								nav#sidenavAccordionPages.sb-sidenav-menu-nested.nav.accordion
-									a.nav-link.collapsed(href='#' data-bs-toggle='collapse' data-bs-target='#pagesCollapseAuth' aria-expanded='false' aria-controls='pagesCollapseAuth')
-										| Authentication
-										.sb-sidenav-collapse-arrow
-											i.fas.fa-angle-down
+									a.nav-link(href='./add-category.pug') Add product
 									#pagesCollapseAuth.collapse(aria-labelledby='headingOne' data-bs-parent='#sidenavAccordionPages')
 										nav.sb-sidenav-menu-nested.nav
 											a.nav-link(href='#') Login

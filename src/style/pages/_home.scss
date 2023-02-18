@@ -288,3 +288,15 @@ div {
 .dropdown-menu {
   margin: 0 !important;
 }
+
+.color-main {
+  color: #6b7965 !important;
+}
+
+.wrap-list_product {
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

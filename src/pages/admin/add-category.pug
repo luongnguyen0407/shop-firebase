@@ -1,0 +1,35 @@
+extends ./layouts/layout.pug
+
+
+block content
+	#layoutSidenav_content
+		section.form-add 
+				form.needs-validation.form_add_category(novalidate='')
+					.row.d-flex.justify-content-center
+						.col-md-4.mb-3
+							label(for='product-name') Category name
+							input#product-name.form-control.name-category(type='text' placeholder='category'  required='' name='Category')
+					button.btn.btn-primary.mx-auto.d-block(type='submit') Add
+				section.listCategory    
+						.container-lg
+							.table-responsive
+								.table-wrapper
+									.table-title
+										.row
+											.col-sm-8
+												h2
+													b Category
+											.col-sm-4
+									table.table.table-bordered
+										thead
+											tr
+												th ID
+												th Name
+												th Actions
+										tbody.tb-wrap-category
+
+
+
+
+block script
+	script(src="../../services/admin/add-category.js" type="module") 

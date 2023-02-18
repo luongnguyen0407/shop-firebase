@@ -3,6 +3,7 @@ const db = getDatabase();
 const listCategory = document.querySelector(".list-category");
 const productName = document.querySelector(".name-product");
 const productPrice = document.querySelector(".price-product");
+const imagePreView = document.querySelector(".img-preview");
 const productImg = document.querySelector(".img-product");
 import { handleLoadImg, showToast, toolbarOptions } from "../../modules/lib";
 import Quill from "quill";
@@ -92,3 +93,13 @@ const handleFormSubmit = async (e) => {
     showToast("Lỗi");
   }
 };
+
+productImg.addEventListener("change", () => {
+  const [file] = productImg.files;
+  if (file) {
+    imagePreView.src = URL.createObjectURL(file);
+    imagePreView.style.display = "block";
+  } else {
+    imagePreView.style.display = "none";
+  }
+});
