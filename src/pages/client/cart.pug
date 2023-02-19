@@ -25,6 +25,12 @@ block content
 																| price 
 																i.fas.fa-angle-down.mt-1
 												.wrap-list-cart
+														.loading-cart.follow-the-leader.mt-5
+																div
+																div
+																div
+																div
+																div
 											.col-lg-5
 												.card.bg-primary.text-white.rounded-3
 													.card-body
@@ -40,39 +46,33 @@ block content
 															i.fab.fa-cc-amex.fa-2x.me-2
 														a.text-white(href='#!' type='submit')
 															i.fab.fa-cc-paypal.fa-2x
-														form.mt-4
+														form.mt-4.form-address.needs-validation(novalidate='' autocomplete="off")
 															.form-outline.form-white.mb-4
-																input#typeName.form-control.form-control-lg(type='text' placeholder="Tên người nhận")
+																input#typeName.form-control.form-control-lg(type='text' placeholder="Tên người nhận" required='' name='customer_name')
 																label.form-label(for='typeName') Tên người nhận
 															.form-outline.form-white.mb-4.wrap_list_pr1.input_province(data-parent='1')
-																input#typeText1.form-control.form-control-lg(type='text' placeholder='Thành phố' minlength='19' maxlength='19')
+																input#typeText1.form-control.form-control-lg(type='text' placeholder='Thành phố' required='city'  name='city')
 																ul.list_province.scroll_style
 																label.form-label(for='typeText1') Thành phố
 															.row.mb-4
 																.col-md-6
 																	.form-outline.form-white.wrap_list_pr2.input_province(data-parent='2')
-																		input#typeExp.form-control.form-control-lg(type='text' placeholder='Huyện' )
+																		input#typeExp.form-control.form-control-lg(type='text' placeholder='Huyện' required='' name='district')
 																		.ul.list_province.scroll_style 
 																		label.form-label(for='typeExp') Huyện
 																.col-md-6
 																	.form-outline.form-white.wrap_list_pr3.input_province(data-parent='3')
-																		input#typeText.form-control.form-control-lg(type='text' placeholder='Thôn' )
+																		input#typeText.form-control.form-control-lg(type='text' placeholder='Thôn' required='' name='ward')
 																		.ul.list_province.scroll_style
 																		label.form-label(for='typeText') Cvv
-														hr.my-4
-														.d-flex.justify-content-between
-															p.mb-2 Subtotal
-															p.mb-2 $4798.00
-														.d-flex.justify-content-between
-															p.mb-2 Shipping
-															p.mb-2 $20.00
-														.d-flex.justify-content-between.mb-4
-															p.mb-2 Total(Incl. taxes)
-															p.mb-2.total_bill 0
-														button.btn.btn-info.btn-block.btn-lg(type='button')
-															.d-flex.justify-content-between
-																span
-																	| Checkout 
-																	i.fas.fa-long-arrow-alt-right.ms-2
+															hr.my-4
+															.d-flex.justify-content-between.mb-4
+																p.mb-2 Tổng tiền
+																p.mb-2.total_bill 0
+															button.btn.btn-info.btn-block.btn-lg.btn-wrap(type='submit')
+																.d-flex.justify-content-between
+																	span.btn-oder
+																		| Đặt hàng
+																		i.fas.fa-long-arrow-alt-right.ms-2
 block script
 		script(src="../../services/cart.js" type="module") 

@@ -55,9 +55,7 @@ const getListUserCart = (uid) => {
     $("#preloder").show();
     if (snapshot.exists()) {
       snapshot.forEach((item) => {
-        console.log("item: ", item);
         let obj = item.val();
-        console.log("obj: ", obj);
         $(".total-cart").text(obj.items.length || 0);
         listCart.setCart = { ...obj, key: item.key };
       });
@@ -268,6 +266,8 @@ function addNewCart({ id, image, name, price }) {
   const cartListRef = ref(db, "cart");
   const newCart = push(cartListRef);
   set(newCart, fakeData);
+  showToast("Thêm sản phẩm thành công");
+  $("#preloder").hide();
 }
 
 function updateCart(cartId, newData) {
@@ -275,6 +275,7 @@ function updateCart(cartId, newData) {
   try {
     update(cartRef, newData);
     showToast("Thêm sản phẩm thành công");
+    $("#preloder").hide();
   } catch (error) {
     console.log(error);
     showToast("Có lỗi xảy ra vui lòng kiểm tra lại");

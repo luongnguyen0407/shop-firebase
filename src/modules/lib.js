@@ -61,3 +61,9 @@ export const handleLoadImg = async (file) => {
     console.log(error);
   }
 };
+
+export const STATUS = {
+  pending: 0,
+  ship: 1,
+  success: 2,
+};
