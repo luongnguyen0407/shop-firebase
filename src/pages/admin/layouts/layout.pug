@@ -18,27 +18,27 @@ body
 							a.nav-link(href='./index.pug')
 								.sb-nav-link-icon
 									i.fas.fa-tachometer-alt
-								|                                 Dashboard
+								| Tổng Quan
 							.sb-sidenav-menu-heading Interface
 							a.nav-link.collapsed(href='#' data-bs-toggle='collapse' data-bs-target='#collapseLayouts' aria-expanded='false' aria-controls='collapseLayouts')
 								.sb-nav-link-icon
 									i.fas.fa-columns
-								|                                 Product
+								| Sản phẩm
 								.sb-sidenav-collapse-arrow
 									i.fas.fa-angle-down
 							#collapseLayouts.collapse(aria-labelledby='headingOne' data-bs-parent='#sidenavAccordion')
 								nav.sb-sidenav-menu-nested.nav
-									a.nav-link(href='./add-product.pug') Add product
-									a.nav-link(href='./product.pug') Manage Product
+									a.nav-link(href='./add-product.pug') Thêm sản phẩm
+									a.nav-link(href='./product.pug') Quản lý sản phẩm
 							a.nav-link.collapsed(href='#' data-bs-toggle='collapse' data-bs-target='#collapsePages' aria-expanded='false' aria-controls='collapsePages')
 								.sb-nav-link-icon
 									i.fas.fa-book-open
-								|                                 Category
+								| Danh mục
 								.sb-sidenav-collapse-arrow
 									i.fas.fa-angle-down
 							#collapsePages.collapse(aria-labelledby='headingTwo' data-bs-parent='#sidenavAccordion')
 								nav#sidenavAccordionPages.sb-sidenav-menu-nested.nav.accordion
-									a.nav-link(href='./add-category.pug') Add product
+									a.nav-link(href='./add-category.pug') Thêm danh mục
 									#pagesCollapseAuth.collapse(aria-labelledby='headingOne' data-bs-parent='#sidenavAccordionPages')
 										nav.sb-sidenav-menu-nested.nav
 											a.nav-link(href='#') Login
@@ -54,14 +54,14 @@ body
 											a.nav-link(href='#') 404 Page
 											a.nav-link(href='#') 500 Page
 							.sb-sidenav-menu-heading Addons
-							a.nav-link(href='#')
+							a.nav-link(href='./order.pug')
 								.sb-nav-link-icon
 									i.fas.fa-chart-area
-								|                                 Charts
+								| Quản lý đơn hàng
 							a.nav-link(href='#')
 								.sb-nav-link-icon
 									i.fas.fa-table
-								|                                 Tables
+								|  Tables
 					.sb-sidenav-footer
 						.small Logged in as:
 						|                         Start Bootstrap

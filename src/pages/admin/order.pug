@@ -1,0 +1,24 @@
+extends ./layouts/layout.pug
+
+block content
+	#layoutSidenav_content
+		.container
+			h1 Qu&#x1EA3;n l&yacute; &dstrok;&#x1A1;n h&agrave;ng
+			table.table
+				thead
+				tr
+					th(scope='col') ID
+					th(scope='col') Tên khách hàng
+					th(scope='col') Ngày đặt hàng
+					th(scope='col') Trạng Thái
+					th(scope='col') Hoạt động
+				tbody.tbody-order
+			.loading-cart.follow-the-leader.mt-5
+				div
+				div
+				div
+				div
+				div
+	include ./components/modal.pug
+block script
+	script(src="../../services/admin/order.js" type="module") 

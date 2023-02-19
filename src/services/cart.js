@@ -12,7 +12,7 @@ import {
   set,
   remove,
 } from "firebase/database";
-import { formatPrice, showToast, STATUS } from "../modules/lib";
+import { formatPrice, getCurrentDay, showToast, STATUS } from "../modules/lib";
 import axios from "axios";
 import { cartUser } from "../models/Cart";
 import Swal from "sweetalert2";
@@ -268,11 +268,13 @@ const handleOrder = () => {
     console.log($(this).value);
     obj[$(this).attr("name")] = $(this).val();
   });
+  console.log(obj);
   const dataOrder = {
     product: newListCart,
     address: obj,
     user_id,
     total_bill: totalBill,
+    date_order: getCurrentDay(),
     status: STATUS.pending,
   };
   console.log("dataOder: ", dataOrder);

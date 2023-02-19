@@ -7,19 +7,19 @@ block content
 				form.needs-validation.form_add_product(novalidate='')
 					.row
 						.col-md-4.mb-3
-							label(for='product-name') Product Name
+							label(for='product-name') Tên sản phẩm
 							input#product-name.form-control.name-product(type='text' placeholder='Name'  required='' name='name')
-							.invalid-feedback This field is require
+							.invalid-feedback Bạn phải nhập tên sản phẩm
 							.valid-feedback
 								| Looks good!
 						.col-md-4.mb-3
-							label(for='validationCustom02') Price
+							label(for='validationCustom02') Giá sản phẩm
 							input#validationCustom02.form-control.price-product(type='text' placeholder='price' name='price' required='')
-							.invalid-feedback This field is require
+							.invalid-feedback Bạn phải nhập giá sản phẩm
 							.valid-feedback
 								| Looks good!
 						.col-md-4.mb-3
-							label.d-block(for='validationCustom02') Category
+							label.d-block(for='validationCustom02') Danh mục
 							select.form-control.custom-select.list-category(required='')
 							.invalid-feedback Example invalid custom select feedback
 					.row
@@ -29,11 +29,12 @@ block content
 							//- textarea#validationCustom03.form-control.detail-product(type='text' placeholder='etails' required='')
 							//- .invalid-feedback
 							//- 	| Please provide a valid city.
-						.col-md-3.mb-3
-							label(for='validationCustom04') Image
+						.col-md-3.mb-3.flex-grow-1
+							label(for='validationCustom04') Hình ảnh
 							input#validationCustom04.form-control.img-product(type='file' placeholder='State' required='')
 							.invalid-feedback
 								| This field is require
+							img.img-preview(src="#", alt="")
 					.form-group 
 						.editor
 					button.btn.btn-primary.mx-auto.d-block(type='submit') Submit form

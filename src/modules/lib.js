@@ -66,4 +66,19 @@ export const STATUS = {
   pending: 0,
   ship: 1,
   success: 2,
+  reject: 3,
+};
+export const STATUS_SHOW = [
+  "Đang xử lý",
+  "Đang vận chuyển",
+  "Đã giao hàng",
+  "Từ chối",
+];
+
+export const getCurrentDay = () => {
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = ("0" + (today.getMonth() + 1)).slice(-2);
+  let day = ("0" + today.getDate()).slice(-2);
+  return (date = year + "-" + month + "-" + day);
 };

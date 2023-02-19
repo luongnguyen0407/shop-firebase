@@ -1,15 +1,16 @@
-import { getDatabase, ref, onValue, push, set } from "firebase/database";
-const db = getDatabase();
-const listCategory = document.querySelector(".list-category");
-const productName = document.querySelector(".name-product");
-const productPrice = document.querySelector(".price-product");
-const imagePreView = document.querySelector(".img-preview");
-const productImg = document.querySelector(".img-product");
-import { handleLoadImg, showToast, toolbarOptions } from "../../modules/lib";
 import Quill from "quill";
+import { handleLoadImg, showToast, toolbarOptions } from "../../modules/lib";
+import { getDatabase, ref, onValue, push, set } from "firebase/database";
+const productPrice = document.querySelector(".price-product");
+const productName = document.querySelector(".name-product");
+const productImg = document.querySelector(".img-product");
+const listCategory = document.querySelector(".list-category");
+const imagePreView = document.querySelector(".img-preview");
 const formAdd = document.querySelector(".form_add_product");
-const starCountRef = ref(db, "category");
 const containerQuill = document.querySelector(".container-quill");
+const db = getDatabase();
+const starCountRef = ref(db, "category");
+
 const quill = new Quill(containerQuill, {
   modules: {
     toolbar: toolbarOptions,

@@ -1,0 +1,22 @@
+#modal-3.modal.micromodal-slide(aria-hidden='true')
+	.modal__overlay(tabindex='-1' data-micromodal-close='')
+		.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+			header.modal__header
+				h2#modal-1-title.modal__title
+					| Chi tiết đơn hàng
+				button.modal__close(aria-label='Close modal' data-micromodal-close='')
+			main#modal-1-content.modal__content.modal__content2
+				table.table.table-striped
+					thead
+						tr
+							th.col Tên sản phẩm
+							th.col Số lượng 
+							th.col Giá bán
+					tbody.list-product-bill
+				p.address
+				p.total_bill Tổng đơn : 300.000.00đ
+				label.d-block Tình trạng đơn : 
+				select.section-status.p-1
+				footer.modal__footer
+					button.modal__btn.modal__btn-primary.btn_save(type='submit') Save
+
