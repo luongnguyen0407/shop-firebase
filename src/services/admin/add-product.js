@@ -1,6 +1,7 @@
 import Quill from "quill";
 import { handleLoadImg, showToast, toolbarOptions } from "../../modules/lib";
 import { getDatabase, ref, onValue, push, set } from "firebase/database";
+import Swal from "sweetalert2";
 const productPrice = document.querySelector(".price-product");
 const productName = document.querySelector(".name-product");
 const productImg = document.querySelector(".img-product");
@@ -87,14 +88,14 @@ const handleFormSubmit = async (e) => {
       name,
       price,
     });
-    showToast("Thêm thành công");
-    quill.setContents("");
-    formAdd.reset();
+    Swal.fire("Thêm sản phẩm thành công").then((result) => {
+      window.location.href = "./product.html";
+    });
   } catch (error) {
+    console.log(error);
     showToast("Lỗi");
   }
 };
-
 productImg.addEventListener("change", () => {
   const [file] = productImg.files;
   if (file) {

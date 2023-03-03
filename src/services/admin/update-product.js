@@ -144,7 +144,9 @@ const handleFormUpdate = async () => {
   }
   try {
     update(productRef, data);
-    showToast("Cập nhật sản phẩm thành công");
+    Swal.fire("Cập nhật sản phẩm thành công").then((result) => {
+      window.location.href = "./product.html";
+    });
   } catch (error) {
     showToast("Có lỗi xảy ra vui lòng kiểm tra lại");
   }
